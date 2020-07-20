@@ -86,8 +86,18 @@ namespace Week03.ConsoleApp
         }
 
         //Find all pairs (2 elements) of elements in an integer array, whose sum is equal to a given number
-        static void Ex2()
+        static void Ex2(int[] array, int sum)
         {
+            for (int i = 0; i < array.Length; i++)
+            {
+                for (int j = i + 1; j < array.Length; j++)
+                {
+                    if (array[i] + array[j] == sum)
+                    {
+                        Console.WriteLine(array[i] + "+" + array[j] + "=" + sum);
+                    }
+                }
+            }
         }
 
         // functie simpla
