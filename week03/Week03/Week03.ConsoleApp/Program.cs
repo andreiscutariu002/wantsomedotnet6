@@ -56,6 +56,40 @@ namespace Week03.ConsoleApp
             return duplicates;
         }
 
+        //EX
+        //LISTEN-SILENT
+        //TRIANGLE-INTEGRAL
+        //Write a Program which checks if two Strings are Anagram or not?
+        static bool Ex7Anagram(string a, string b)
+        {
+            if (a.Length == b.Length)
+            {
+                char[] aCharArray = a.ToCharArray();
+                char[] bCharArray = b.ToCharArray();
+                Array.Sort(aCharArray);
+                Array.Sort(bCharArray);
+                
+                    for (int i = 0; i > a.Length; i++)
+                {
+                    if (aCharArray[i] != bCharArray[i])
+                    {
+                        return false;
+                    }
+                }
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        //Find all pairs (2 elements) of elements in an integer array, whose sum is equal to a given number
+        static void Ex2()
+        {
+        }
+
         // functie simpla
         // nu are input (nu are parametri)
         // nu are output (nu are return, "intoarce void"
