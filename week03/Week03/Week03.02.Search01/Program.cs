@@ -132,13 +132,45 @@ namespace Week03._02.Search01
             return arrayMinMax;
         }
 
+
+        // complexities
         static void DisplayArray(int[] array)
         {
-            for (int i = 0; i < array.Length; i++) 
-            for (int j = 0; j < array.Length; j++) 
+            for (int i = 0; i < array.Length; i++) // n
             {
-                Console.WriteLine(array[i]);
+                for (int j = 0; j < array.Length; j++) // n
+                {
+                    Console.WriteLine(array[i]);
+                }
             }
+            // =>
+            // n * n
+
+            for (int i = 0; i < array.Length; i++) // n
+            {
+                for (int j = 0; j < array.Length; j++) // n
+                {
+                    for (int k = 0; k < array.Length; k++) // n
+                    {
+                        Console.WriteLine(array[i]);
+                    }
+                }
+            }
+            // =>
+            // n * n * n 
+
+            int n = 1000;
+            int m = 200;
+
+            for (int i = 0; i < n; i++) // n
+            {
+                for (int j = 0; j < m; j++) // m
+                {
+                    Console.WriteLine(array[i]);
+                }
+            }
+            // =>
+            // n * m
         }
     }
 }
