@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week03.BubbleSort", "Week03
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week03.02.Search01", "Week03.02.Search01\Week03.02.Search01.csproj", "{C22797A2-222F-4CDB-BCC1-CC8BF936D285}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week03.02.MDArrays", "Week03.02.MDArrays\Week03.02.MDArrays.csproj", "{CD3D7C61-BD85-4BD0-9FD0-9C32559BB065}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C22797A2-222F-4CDB-BCC1-CC8BF936D285}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C22797A2-222F-4CDB-BCC1-CC8BF936D285}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C22797A2-222F-4CDB-BCC1-CC8BF936D285}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD3D7C61-BD85-4BD0-9FD0-9C32559BB065}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD3D7C61-BD85-4BD0-9FD0-9C32559BB065}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD3D7C61-BD85-4BD0-9FD0-9C32559BB065}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD3D7C61-BD85-4BD0-9FD0-9C32559BB065}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
