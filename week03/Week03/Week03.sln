@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week03.ConsoleApp", "Week03.ConsoleApp\Week03.ConsoleApp.csproj", "{2D5270B6-24CB-47A3-9C2C-542C676AE6B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week03.ConsoleApp", "Week03.ConsoleApp\Week03.ConsoleApp.csproj", "{2D5270B6-24CB-47A3-9C2C-542C676AE6B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week03.BubbleSort", "Week03.BubbleSort\Week03.BubbleSort.csproj", "{C3445A82-C5E4-453F-92D5-A39BE001519A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week03.BubbleSort", "Week03.BubbleSort\Week03.BubbleSort.csproj", "{C3445A82-C5E4-453F-92D5-A39BE001519A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week03.02.Search01", "Week03.02.Search01\Week03.02.Search01.csproj", "{C22797A2-222F-4CDB-BCC1-CC8BF936D285}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{C3445A82-C5E4-453F-92D5-A39BE001519A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3445A82-C5E4-453F-92D5-A39BE001519A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3445A82-C5E4-453F-92D5-A39BE001519A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C22797A2-222F-4CDB-BCC1-CC8BF936D285}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C22797A2-222F-4CDB-BCC1-CC8BF936D285}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C22797A2-222F-4CDB-BCC1-CC8BF936D285}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C22797A2-222F-4CDB-BCC1-CC8BF936D285}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
