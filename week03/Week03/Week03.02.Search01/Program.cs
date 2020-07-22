@@ -4,6 +4,39 @@ namespace Week03._02.Search01
 {
     class Program
     {
+        // daca un un dataset de lungime N
+        // targetul e cu fiecare iteratie sa injumatatim datesetul ce urmeaza a fi scanatat
+        // devide et empera O(log(N))
+        static void BinarySearch()
+        {
+            int[] array = new[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            int start = 0, end = array.Length;
+            var elem = -1;
+            var mid = array.Length / 2;
+            var elemPos = -1;
+
+            while (start <= end)
+            {
+                if (elem > array[mid])
+                {
+                    start = mid + 1;
+                    mid = (end + start) / 2;
+                }
+                else if (elem < array[mid])
+                {
+                    end = mid - 1;
+                    mid = (start + end) / 2;
+                }
+                else
+                {
+                    elemPos = mid;
+                    break;
+                }
+            }
+         
+            Console.WriteLine($"Pozitia elementului este: {elemPos}.");
+        }
+
         static void Main(string[] args)
         {
             int[] array = new[] { 1, 6, 4, 5, 2, 0, -1 };
