@@ -25,5 +25,10 @@
         {
             SomeStaticField = -1;
         }
+
+        public override bool CanBeFired
+        {
+            get { return true; }
+        }
     }
 }

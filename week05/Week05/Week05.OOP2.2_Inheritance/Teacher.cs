@@ -12,5 +12,10 @@
         }
 
         public string School { get; set; }
+
+        public override bool CanBeFired
+        {
+            get { return true; }
+        }
     }
 }

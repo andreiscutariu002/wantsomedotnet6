@@ -16,6 +16,8 @@
             this.Salary = salary;
         }
 
+        public abstract bool CanBeFired { get; }
+
         public string Name { get; set; }
 
         public string Cnp { get; set; }

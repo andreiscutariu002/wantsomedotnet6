@@ -11,9 +11,21 @@
             this.Name = name;
         }
 
-        public void FireEmployee(string cnp)
+        public void FireEmployee(Employee employee)
         {
-            Console.WriteLine($"FireEmployee from Manager with cnp {cnp}");
+            if (employee.CanBeFired)
+            {
+                Console.WriteLine($"FireEmployee from Manager with cnp {employee.Cnp}");
+            }
+            else
+            {
+                Console.WriteLine("Error");
+            }
+        }
+
+        public override bool CanBeFired
+        {
+            get { return false; }
         }
     }
 }

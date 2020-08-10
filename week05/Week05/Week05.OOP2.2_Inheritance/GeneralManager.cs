@@ -20,5 +20,10 @@
 
             this.ProtectedInternalMethod();
         }
+
+        public override bool CanBeFired
+        {
+            get { return false; }
+        }
     }
 }

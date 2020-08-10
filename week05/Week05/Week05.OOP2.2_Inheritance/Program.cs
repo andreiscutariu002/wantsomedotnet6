@@ -38,6 +38,11 @@
             {
                 Console.WriteLine(employee.Name);
             }
+
+            Console.WriteLine();
+            Console.WriteLine();
+
+            manager.FireEmployee(teacher);
         }
     }
 }
