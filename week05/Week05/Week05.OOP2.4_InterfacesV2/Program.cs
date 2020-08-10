@@ -2,6 +2,60 @@
 
 namespace Week05.OOP2._4_InterfacesV2
 {
+    public abstract class Shape
+    {
+        public abstract void SetPosition(int x, int y);
+        public abstract int CalculateSurface();
+    }
+
+    public abstract class Movable
+    {
+        public abstract void Move(int deltaX, int deltaY);
+    }
+
+    // error
+    //public class SomeShape : Shape, Movable 
+    //{
+    //    public override void SetPosition(int x, int y)
+    //    {
+    //        throw new NotImplementedException();
+    //    }
+
+    //    public override int CalculateSurface()
+    //    {
+    //        throw new NotImplementedException();
+    //    }
+
+    //    public void Move(int deltaX, int deltaY)
+    //    {
+    //        throw new NotImplementedException();
+    //    }
+    //}
+
+    // este permis
+    public class SomeShape : Shape, IMovable, IClosable
+    {
+        public override void SetPosition(int x, int y)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override int CalculateSurface()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Move(int deltaX, int deltaY)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Close()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
     public interface IShape
     {
         void SetPosition(int x, int y);
