@@ -25,6 +25,26 @@
         public Address Address { get; set; }
 
         public static int SomeStaticField { get; set; }
+
+        internal void InternalMethod()
+        {
+        }
+
+        protected internal void ProtectedInternalMethod()
+        {
+        }
+
+        protected void ProtectedMethod()
+        {
+        }
+
+        public void PublicMethod()
+        {
+        }
+
+        private void PrivateMethod()
+        {
+        }
     }
 
     //public class DummyEmployee : Employee

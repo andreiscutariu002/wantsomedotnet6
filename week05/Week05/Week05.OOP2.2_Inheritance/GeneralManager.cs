@@ -9,9 +9,16 @@
             Console.WriteLine("GeneralManager instance created");
         }
 
-        public new void FireEmployee(string cnp) // public void FireEmployee(string cnp)
+        //public new void FireEmployee(string cnp) // public void FireEmployee(string cnp)
+        //{
+        //    Console.WriteLine($"Do Not FireEmployee from GeneralManager with cnp {cnp}");
+        //}
+
+        public void SomeMethod()
         {
-            Console.WriteLine($"Do Not FireEmployee from GeneralManager with cnp {cnp}");
+            this.ProtectedMethod();
+
+            this.ProtectedInternalMethod();
         }
     }
 }
