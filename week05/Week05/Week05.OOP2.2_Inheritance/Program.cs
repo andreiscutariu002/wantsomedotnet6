@@ -1,5 +1,7 @@
 ﻿namespace Week05.OOP2._2_Inheritance
 {
+    using System;
+    using System.Collections.Generic;
     using System.Globalization;
 
     /*
@@ -17,13 +19,25 @@
         {
             //Programmer p = new Programmer();
 
-            GeneralManager m = new GeneralManager("upoldas", "Mihai");
+            GeneralManager generalManager = new GeneralManager("upoldas", "Mihai");
+            Manager manager = new Manager("1234", "Vasile");
+            Programmer programmer =  new Programmer("iqweq123", "100");
+            Teacher teacher = new Teacher("123445", "Iasi 5");
 
-            m.FireEmployee("1234");
+            List<Employee> employees = new List<Employee>();
 
-            m.PublicMethod();
+            employees.Add(generalManager);
+            employees.Add(teacher);
+            employees.Add(manager);
+            employees.Add(programmer);
 
-            m.InternalMethod();
+            Console.WriteLine();
+            Console.WriteLine();
+
+            foreach (Employee employee in employees)
+            {
+                Console.WriteLine(employee.Name);
+            }
         }
     }
 }

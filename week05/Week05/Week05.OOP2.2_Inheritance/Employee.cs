@@ -2,14 +2,14 @@
 {
     using System;
 
-    public class Employee 
+    public abstract class Employee 
     {
         //// not ok
         //public Employee()
         //{
         //}
 
-        public Employee(string cnp, string salary)
+        protected Employee(string cnp, string salary)
         {
             Console.WriteLine("Employee instance created");
             this.Cnp = cnp;
