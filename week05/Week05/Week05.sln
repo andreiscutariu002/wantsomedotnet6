@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week05.OOP2.3_AbstractionV2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week05.OOP2.4_InterfacesV2", "Week05.OOP2.4_InterfacesV2\Week05.OOP2.4_InterfacesV2.csproj", "{E6CF041D-7887-42B2-975E-2DE5E68E5661}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week05.OOP2.5_VirtualMembers", "Week05.OOP2.5_VirtualMembers\Week05.OOP2.5_VirtualMembers.csproj", "{0D4ED97B-F4B2-49B2-B87B-374F87A59A9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week05.OOP2.6_Encapsulation", "Week05.OOP2.5_Encapsulation\Week05.OOP2.6_Encapsulation.csproj", "{4ADB9ED4-D1F2-4EE7-8C04-4BCE65FF95CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{E6CF041D-7887-42B2-975E-2DE5E68E5661}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6CF041D-7887-42B2-975E-2DE5E68E5661}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6CF041D-7887-42B2-975E-2DE5E68E5661}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D4ED97B-F4B2-49B2-B87B-374F87A59A9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D4ED97B-F4B2-49B2-B87B-374F87A59A9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D4ED97B-F4B2-49B2-B87B-374F87A59A9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D4ED97B-F4B2-49B2-B87B-374F87A59A9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4ADB9ED4-D1F2-4EE7-8C04-4BCE65FF95CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ADB9ED4-D1F2-4EE7-8C04-4BCE65FF95CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ADB9ED4-D1F2-4EE7-8C04-4BCE65FF95CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ADB9ED4-D1F2-4EE7-8C04-4BCE65FF95CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
