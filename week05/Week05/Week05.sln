@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week05.OOP2.5_VirtualMember
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week05.OOP2.6_Encapsulation", "Week05.OOP2.5_Encapsulation\Week05.OOP2.6_Encapsulation.csproj", "{4ADB9ED4-D1F2-4EE7-8C04-4BCE65FF95CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week05.OOP2.6_Polymorphism", "Week05.OOP2.6_Polymorphism\Week05.OOP2.6_Polymorphism.csproj", "{AB80B53A-AE77-4644-BD38-096EB5FAAA09}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{4ADB9ED4-D1F2-4EE7-8C04-4BCE65FF95CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4ADB9ED4-D1F2-4EE7-8C04-4BCE65FF95CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4ADB9ED4-D1F2-4EE7-8C04-4BCE65FF95CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB80B53A-AE77-4644-BD38-096EB5FAAA09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB80B53A-AE77-4644-BD38-096EB5FAAA09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB80B53A-AE77-4644-BD38-096EB5FAAA09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB80B53A-AE77-4644-BD38-096EB5FAAA09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
