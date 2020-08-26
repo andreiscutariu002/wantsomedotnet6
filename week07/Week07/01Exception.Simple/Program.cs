@@ -26,6 +26,13 @@
                 //Console.WriteLine(e);
                 //throw;
             }
+
+            try
+            {
+            }
+            catch // without Exception filter
+            {
+            }
         }
     }
 }
