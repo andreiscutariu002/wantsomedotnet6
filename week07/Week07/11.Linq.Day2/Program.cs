@@ -18,7 +18,7 @@
         {
             // o lista de utilizatori
             List<User> users = ReadUsers("users.json");
-            
+
             // o lista de postari pt fiecare user
             List<Post> posts = ReadPosts("posts.json");
 
@@ -28,8 +28,13 @@
             // https://www.tutorialsteacher.com/linq/linq-filtering-operators-where
 
             IEnumerable<User> studentsWithDotNet = from user in users
-                where user.Email.EndsWith(".net") // boolean condition
-                select user; // select x => o sa avem un IEnumerable de tipul lui x
+                                                   where user.Email.EndsWith(".net") // boolean condition
+                                                   select user; // select x => o sa avem un IEnumerable de tipul lui x
+
+            IEnumerable<User> studentsWithDotNet_2 =
+                users
+                    .Where(user => user.Email.EndsWith(".net"))
+                    .Select(user => user);
 
             Console.WriteLine(studentsWithDotNet.Count());
 
@@ -39,8 +44,13 @@
             // https://www.tutorialsteacher.com/linq/linq-projection-operators
 
             IEnumerable<int> idsOfStudentsWithDotNet = from user in users
-                where user.Email.EndsWith(".net") // boolean condition
-                select user.Id; // select x => o sa avem un IEnumerable de tipul lui x
+                                                       where user.Email.EndsWith(".net") // boolean condition
+                                                       select user.Id; // select x => o sa avem un IEnumerable de tipul lui x
+
+            IEnumerable<int> idsOfStudentsWithDotNet_2 =
+                users
+                    .Where(user => user.Email.EndsWith(".net"))
+                    .Select(user => user.Id);
 
             foreach (var i in idsOfStudentsWithDotNet)
             {
@@ -50,8 +60,10 @@
             // 1.2 - emails of users having email ending with ".net".
 
             IEnumerable<string> emailsOfUsersWithNet = from user in users
-                where user.Email.EndsWith(".net")
-                select user.Email;
+                                                       where user.Email.EndsWith(".net")
+                                                       select user.Email;
+
+            var emailsOfUsersWithNet_2 = users.Where(user => user.Email.EndsWith(".net")).Select(x => x.Email);
 
             foreach (var i in emailsOfUsersWithNet)
             {
@@ -61,8 +73,8 @@
             // 1.3 - companies of users having email ending with ".net".
 
             IEnumerable<Company> companiesOfUsersWithNet = from user in users
-                where user.Email.EndsWith(".net")
-                select user.Company;
+                                                           where user.Email.EndsWith(".net")
+                                                           select user.Company;
 
             foreach (var company in companiesOfUsersWithNet)
             {
@@ -72,8 +84,8 @@
             // 1.4 - name of companies of users having email ending with ".net".
 
             IEnumerable<string> nameOfCompaniesOfUsersWithNet = from user in users
-                where user.Email.EndsWith(".net")
-                select user.Company.Name;
+                                                                where user.Email.EndsWith(".net")
+                                                                select user.Company.Name;
 
             foreach (var company in nameOfCompaniesOfUsersWithNet)
             {
@@ -85,22 +97,39 @@
             // proiectia dorita [user name + company name]
 
             var nameOfUserAndCompany = from user in users
-                where user.Email.EndsWith(".net")
-                select new UserWithCompany()
-                {
-                    UserName = user.Name,
-                    CompanyName = user.Company.Name
-                };
+                                       where user.Email.EndsWith(".net")
+                                       select new UserWithCompany()
+                                       {
+                                           UserName = user.Name,
+                                           CompanyName = user.Company.Name
+                                       };
+
+            var nameOfUserAndCompany_2 = 
+                users
+                    .Where(user => user.Email.EndsWith(".net"))
+                    .Select(user =>
+                        new UserWithCompany
+                        {
+                            CompanyName = user.Company.Name,
+                            UserName = user.Name
+                        });
 
             // 1.6 - website + phone of  users having email ending with ".net".
             // anonymous objects
             var websiteAndPhone = from user in users
-                where user.Email.EndsWith(".net")
-                select new 
-                {
+                                  where user.Email.EndsWith(".net")
+                                  select new
+                                  {
+                                      Phone = user.Phone,
+                                      Website = user.Website
+                                  };
+
+            var websiteAndPhone_2 = users
+                .Where(user => user.Email.EndsWith(".net"))
+                .Select(user => new {
                     Phone = user.Phone,
                     Website = user.Website
-                };
+                });
 
             foreach (var o in websiteAndPhone)
             {
@@ -114,13 +143,35 @@
             // 2 - find all posts for users having email ending with ".net".
 
             IEnumerable<int> listOfUserIDs = from user in users
-                where user.Email.EndsWith(".net")
-                select user.Id;
+                                             where user.Email.EndsWith(".net")
+                                             select user.Id;
 
-            var listOfPostsForId = from post in posts
-                where listOfUserIDs.Contains(post.UserId)
-                select post;
-            
+            IEnumerable<Post> listOfPostsForIdV1 = from post in posts
+                                                   where CheckPostUserIdInList(listOfUserIDs, post)  // defined function
+                                                   select post;
+
+
+            Func<IEnumerable<int>, Post, bool> predicate = (userIds, post) =>
+            {
+                foreach (var userId in userIds)
+                {
+                    if (userId == post.UserId)
+                    {
+                        return true;
+                    }
+                }
+
+                return false;
+            };
+
+            IEnumerable<Post> listOfPostsForIdV2 = from post in posts
+                                                   where predicate(listOfUserIDs, post) // local func
+                                                   select post;
+
+            IEnumerable<Post> listOfPostsForIdV3 = from post in posts
+                                                   where listOfUserIDs.Contains(post.UserId)  //linq
+                                                   select post;
+
             Console.WriteLine(listOfPostsForId.Count());
 
             // 3 - print number of posts for each user.
@@ -151,6 +202,22 @@
             // 11 - order users by zip code
 
             // 12 - order users by number of posts
+        }
+
+        private static bool CheckPostUserIdInList(IEnumerable<int> listOfUserIDs, Post post)
+        {
+            //option
+            //return listOfUserIDs.Contains(post.UserId);
+
+            foreach (var userId in listOfUserIDs)
+            {
+                if (post.UserId == userId)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         private static List<Post> ReadPosts(string file)
