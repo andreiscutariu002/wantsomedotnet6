@@ -26,6 +26,13 @@
                 // - IEnumerable se materializeaza cand este iterat (se face foreach)
 
                 // se intampla o iteratie
+
+            var first = idsEnumerable.First();
+
+            //var firstAndSecond = idsEnumerable.Take(2).ToList();
+            
+            var _3_4 = idsEnumerable.Skip(4).Take(2).ToList();
+                
             foreach (var id in idsEnumerable)
             {
                 Console.WriteLine($"--- Printam useri, suntem la: {id}");

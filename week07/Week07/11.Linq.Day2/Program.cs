@@ -31,7 +31,7 @@
 
             // IEnumerable Explained 
             var instance = new EnumerableEx();
-            instance.RunV2(users);
+            instance.Run(users);
 
             // 1 - find all users having email ending with ".net".
 
