@@ -29,6 +29,10 @@
             // o lista de postari pt fiecare user
             List<Post> posts = ReadPosts("posts.json");
 
+            // IEnumerable Explained 
+            var instance = new EnumerableEx();
+            instance.RunV2(users);
+
             // 1 - find all users having email ending with ".net".
 
             // where
@@ -198,10 +202,22 @@
             }
 
             // 4 - find all users that have lat and long negative.
+            
+            var listOfUsersWithLatAndLongNeg = from user in users
+                where user.Address.Geo.Lat < 0 && user.Address.Geo.Lng < 0
+                select user;
 
-
+            var listOfUsersWithLatAndLongNeg2 =
+                users
+                    .Where(user => user.Address.Geo.Lat < 0 && user.Address.Geo.Lng < 0)
+                    .Select(user => user);
+            
             // 5 - find the post with longest body.
-
+            
+            var listPostsDesc = posts.OrderByDescending(post => post.Body.Length);
+            var maxLengthPost = listPostsDesc.First();
+            var maxLengthPost2 = listPostsDesc.Take(1);
+            var maxLengthPost3 = listPostsDesc.Take(1).Skip(5);
 
             // 6 - print the name of the employee that have post with longest body.
 
