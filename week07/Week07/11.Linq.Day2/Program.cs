@@ -12,6 +12,13 @@
         public string CompanyName { get; set; }
     }
 
+    class UserPosts
+    {
+        public int UserId { get; set; }
+
+        public IEnumerable<Post> Posts { get; set; }
+    }
+
     internal class Program
     {
         private static void Main(string[] args)
@@ -172,10 +179,23 @@
                                                    where listOfUserIDs.Contains(post.UserId)  //linq
                                                    select post;
 
-            Console.WriteLine(listOfPostsForId.Count());
+            Console.WriteLine(listOfPostsForIdV3.Count());
 
             // 3 - print number of posts for each user.
 
+            var listOfUsers = from user in users
+                select new UserPosts()
+                {
+                    UserId = user.Id,
+                    Posts = from post in posts
+                        where user.Id.Equals(post.UserId)
+                        select post
+                };
+
+            foreach (UserPosts userPosts in listOfUsers)
+            {
+                Console.WriteLine($"user: {userPosts.UserId}, nr posts: {userPosts.Posts.Count()}");
+            }
 
             // 4 - find all users that have lat and long negative.
 
