@@ -7,23 +7,29 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.SimpleConsole", "01.Simp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.ExecuteScalar", "02.ExecuteScalar\02.ExecuteScalar.csproj", "{B781983B-C420-4715-9AC4-0A6E3998EF33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Insert", "03.Insert\03.Insert.csproj", "{E723D742-BC2F-42FA-99F9-7FF1FD07A80C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.Insert", "03.Insert\03.Insert.csproj", "{E723D742-BC2F-42FA-99F9-7FF1FD07A80C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.BadWay", "04.BadWay\04.BadWay.csproj", "{3D50A690-49A7-44A2-8F78-1B042FD968FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.BadWay", "04.BadWay\04.BadWay.csproj", "{3D50A690-49A7-44A2-8F78-1B042FD968FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.GoodWayV1", "05.GoodWayV1\05.GoodWayV1.csproj", "{27AEF275-6608-4E75-B2D9-7CD7CB299ED6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.GoodWayV1", "05.GoodWayV1\05.GoodWayV1.csproj", "{27AEF275-6608-4E75-B2D9-7CD7CB299ED6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.GoodWayV2", "06.GoodWayV2\06.GoodWayV2.csproj", "{A0459030-87E5-433E-A5B3-4DC7932FF1D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.GoodWayV2", "06.GoodWayV2\06.GoodWayV2.csproj", "{A0459030-87E5-433E-A5B3-4DC7932FF1D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.InsertSqlInjection", "07.InsertSqlInjection\07.InsertSqlInjection.csproj", "{49A8CEFC-9C03-42A6-B877-79E49FF9C0BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07.InsertSqlInjection", "07.InsertSqlInjection\07.InsertSqlInjection.csproj", "{49A8CEFC-9C03-42A6-B877-79E49FF9C0BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.InsertUsingParams", "08.InsertUsingParams\08.InsertUsingParams.csproj", "{4422A178-25AB-4DA0-B40F-88BDEE5441B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08.InsertUsingParams", "08.InsertUsingParams\08.InsertUsingParams.csproj", "{4422A178-25AB-4DA0-B40F-88BDEE5441B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.Update", "09.Update\09.Update.csproj", "{13C6C765-45B7-40D9-B889-609D5DF97779}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09.Update", "09.Update\09.Update.csproj", "{13C6C765-45B7-40D9-B889-609D5DF97779}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.Delete", "10.Delete\10.Delete.csproj", "{20D3AAD1-D709-4856-AE64-1C9BA9900BD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10.Delete", "10.Delete\10.Delete.csproj", "{20D3AAD1-D709-4856-AE64-1C9BA9900BD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.ExecuteQuery", "11.ExecuteQuery\11.ExecuteQuery.csproj", "{5EEB744C-9E48-4827-B109-86C4057003C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11.ExecuteQuery", "11.ExecuteQuery\11.ExecuteQuery.csproj", "{5EEB744C-9E48-4827-B109-86C4057003C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.LoadConfigFromJson", "12.LoadConfigFromJson\12.LoadConfigFromJson.csproj", "{C94E17B2-8E48-4E1A-9F5E-3D157F4BA03F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.LoadConfigOnNetFramework", "13.LoadConfigOnNetFramework\13.LoadConfigOnNetFramework.csproj", "{536FC0FE-F7D0-4759-83AB-2E3B802F89AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14.SimplePublisherApplication", "14.SimplePublisherApplication\14.SimplePublisherApplication.csproj", "{F55E8450-6890-47DD-9E3D-64537EE45C01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +81,18 @@ Global
 		{5EEB744C-9E48-4827-B109-86C4057003C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EEB744C-9E48-4827-B109-86C4057003C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EEB744C-9E48-4827-B109-86C4057003C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C94E17B2-8E48-4E1A-9F5E-3D157F4BA03F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C94E17B2-8E48-4E1A-9F5E-3D157F4BA03F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C94E17B2-8E48-4E1A-9F5E-3D157F4BA03F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C94E17B2-8E48-4E1A-9F5E-3D157F4BA03F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{536FC0FE-F7D0-4759-83AB-2E3B802F89AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{536FC0FE-F7D0-4759-83AB-2E3B802F89AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{536FC0FE-F7D0-4759-83AB-2E3B802F89AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{536FC0FE-F7D0-4759-83AB-2E3B802F89AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F55E8450-6890-47DD-9E3D-64537EE45C01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F55E8450-6890-47DD-9E3D-64537EE45C01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F55E8450-6890-47DD-9E3D-64537EE45C01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F55E8450-6890-47DD-9E3D-64537EE45C01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
