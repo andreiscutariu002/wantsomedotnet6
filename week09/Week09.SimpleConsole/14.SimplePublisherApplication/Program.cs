@@ -26,7 +26,7 @@ namespace _14.SimplePublisherApplication
                 }
             );
 
-            Publisher publisher = publisherManager.Read(1);
+            Publisher publisher = publisherManager.Read(2);
         }
     }
 }

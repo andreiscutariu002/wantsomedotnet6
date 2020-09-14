@@ -40,7 +40,39 @@ namespace _14.SimplePublisherApplication.Implementations
 
         public Publisher Read(int id)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                var commandText = "select * from Publisher where PublisherId = @idParam";
+                var idParam = new SqlParameter("idParam", id);
+                var command = new SqlCommand(commandText);
+                command.Parameters.Add(idParam);
+
+                command.Connection = connection;
+
+                using (var reader = command.ExecuteReader())
+                {
+                    if (reader.HasRows)
+                    {
+                        reader.Read();
+
+                        var publisherId = reader[0];
+                        var name = reader[1];
+
+                        return new Publisher
+                        {
+                            PublisherId = int.Parse(publisherId.ToString()),
+                            Name = name.ToString()
+                        };
+                    }
+                    else
+                    {
+                    }
+                }
+            }
+
+            return new Publisher();
         }
 
         public int Update(Publisher publisher)
