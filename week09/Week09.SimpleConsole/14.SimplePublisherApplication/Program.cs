@@ -18,15 +18,22 @@ namespace _14.SimplePublisherApplication
 
             IPublisherManager publisherManager = new PublisherManager(connectionString);
 
-            int result = publisherManager.Create(
-                new Publisher
-                {
-                    PublisherId = 2,
-                    Name = "Vasile"
-                }
-            );
+            //int result = publisherManager.Create(
+            //    new Publisher
+            //    {
+            //        PublisherId = 2,
+            //        Name = "Vasile"
+            //    }
+            //);
 
-            Publisher publisher = publisherManager.Read(2);
+            //Publisher publisher = publisherManager.Read(3);
+
+            var list = publisherManager.GetPublishersWhereNameIsLike("dan");
+
+            foreach(var item in list)
+            {
+                Console.WriteLine(item.Name);
+            }
         }
     }
 }

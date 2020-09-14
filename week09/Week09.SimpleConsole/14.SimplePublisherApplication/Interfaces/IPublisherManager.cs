@@ -14,5 +14,7 @@ namespace _14.SimplePublisherApplication.Interfaces
         int Update(Publisher publisher);
 
         int Delete(int id);
+
+        IList<Publisher> GetPublishersWhereNameIsLike(string value);
     }
 }
