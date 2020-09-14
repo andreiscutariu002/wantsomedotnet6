@@ -1,21 +1,41 @@
 ﻿using _14.SimplePublisherApplication.Entities;
 using _14.SimplePublisherApplication.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Data.SqlClient;
 
 namespace _14.SimplePublisherApplication.Implementations
 {
     public class PublisherManager : IPublisherManager
     {
-        public int Create(Publisher publisher)
+        private readonly string connectionString;
+
+        public PublisherManager(string connectionString)
         {
-            throw new NotImplementedException();
+            this.connectionString = connectionString;
         }
 
-        public int Delete(int id)
+        public int Create(Publisher publisher)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                var commandText = $"insert into Publisher values (@idParam, @nameParam)";
+
+                var idParam = new SqlParameter("idParam", publisher.PublisherId);
+                var nameParam = new SqlParameter("nameParam", publisher.Name);
+
+                var command = new SqlCommand(commandText);
+
+                command.Parameters.Add(idParam);
+                command.Parameters.Add(nameParam);
+
+                command.Connection = connection;
+
+                var result = command.ExecuteNonQuery();
+
+                return result;
+            }
         }
 
         public Publisher Read(int id)
@@ -24,6 +44,11 @@ namespace _14.SimplePublisherApplication.Implementations
         }
 
         public int Update(Publisher publisher)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int Delete(int id)
         {
             throw new NotImplementedException();
         }

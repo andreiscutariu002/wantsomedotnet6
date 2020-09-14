@@ -2,6 +2,7 @@
 using _14.SimplePublisherApplication.Interfaces;
 using Microsoft.Extensions.Configuration;
 using System;
+using _14.SimplePublisherApplication.Entities;
 
 namespace _14.SimplePublisherApplication
 {
@@ -15,17 +16,17 @@ namespace _14.SimplePublisherApplication
 
             var connectionString = config["ConnectionString"];
 
-            Console.WriteLine(connectionString);
-
-            IPublisherManager publisherManager = new PublisherManager();
+            IPublisherManager publisherManager = new PublisherManager(connectionString);
 
             int result = publisherManager.Create(
-                new Entities.Publisher
+                new Publisher
                 {
-                    PublisherId = 1,
-                    Name = "Andrei"
+                    PublisherId = 2,
+                    Name = "Vasile"
                 }
             );
+
+            Publisher publisher = publisherManager.Read(1);
         }
     }
 }
