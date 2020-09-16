@@ -1,0 +1,11 @@
+﻿namespace _07Generics
+{
+    public class SuperProfessor
+    {
+        public int Id { get; set; }
+
+        public string Name { get; set; }
+
+        public string Grade { get; set; }
+    }
+}
